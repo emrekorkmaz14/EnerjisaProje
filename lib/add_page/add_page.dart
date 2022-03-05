@@ -17,16 +17,17 @@ class _AddPageState extends State<AddPage> {
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
       ),
-      backgroundColor: Color.fromARGB(255, 178, 240, 195),
+      backgroundColor: const Color.fromARGB(255, 178, 240, 195),
       body: Padding(
         padding: EdgeInsets.symmetric(
-            vertical: MediaQuery.of(context).size.width * 0.4,
+            vertical: MediaQuery.of(context).size.width * 0.27,
             horizontal: MediaQuery.of(context).size.width * 0.08),
         child: Column(
           children: [
-            const TextField1(text: "Elektrik Sayaç No"),
-            const TextField1(text: "Su Sayaç No"),
-            const TextField1(text: "Doğalgaz Sayaç No"),
+            const TextField1(text: "Elektrik Sayaç No",obs: false,),
+            const TextField1(text: "Su Sayaç No",obs: false),
+            const TextField1(text: "Doğalgaz Sayaç No",obs: false),
+            const TextField1(text: "Kaydetmek İstediğiniz İsim",obs: false),
             const Spacer(),
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.5,
@@ -36,11 +37,11 @@ class _AddPageState extends State<AddPage> {
                 child: Text(
                   "Kaydet",
                   style: GoogleFonts.roboto(
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       fontWeight: FontWeight.w800),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 255, 255, 255),
+                  primary: const Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
             ),

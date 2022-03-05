@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sadeneme/add_page/add_page.dart';
-import 'package:sadeneme/dwelling_page/dwelling_Page.dart';
-import 'package:sadeneme/home_page/home_page.dart';
-import 'package:sadeneme/statistics.dart';
-import 'package:sadeneme/uses_control_page/control_page.dart';
-import 'package:sadeneme/uses_page/uses_page.dart';
 import 'login_page/login_page.dart';
-import 'nav_bar.dart';
+
 
 void main() {
   runApp(const MyApp());

@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,7 +34,7 @@ class _ControlPageState extends State<ControlPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Listtilewidget(
                 svg: SvgPicture.asset("assets/daily.svg"), text: " Günlük "),
             SizedBox(
@@ -47,7 +47,7 @@ class _ControlPageState extends State<ControlPage> {
             ),
             Listtilewidget(
                 svg: SvgPicture.asset("assets/daily.svg"), text: " Aylık "),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),

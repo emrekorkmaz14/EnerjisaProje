@@ -18,17 +18,26 @@ class _UsesPageState extends State<UsesPage> {
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 178, 240, 195),
         appBar: AppBar(
-          actions: [
-            SvgPicture.asset("assets/logos.svg",
-                height: MediaQuery.of(context).size.height * 0.04),
-          ],
+          
           backgroundColor: Colors.white,
-          title: Text(
-            "Energy Savers",
-            style: GoogleFonts.roboto(
-                color: Colors.black, fontWeight: FontWeight.w500),
+          title: Row(
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.07,
+              ),
+              SvgPicture.asset("assets/logos.svg",
+                  height: MediaQuery.of(context).size.height * 0.05),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.05,
+              ),
+              Text(
+                "Energy Saver",
+                style: GoogleFonts.roboto(
+                    color: Colors.black, fontWeight: FontWeight.w500),
+              ),
+            ],
           ),
-          centerTitle: true,
+          
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(

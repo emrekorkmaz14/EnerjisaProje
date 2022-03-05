@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sadeneme/home_page/home_page.dart';
+
 import 'package:sadeneme/nav_bar.dart';
 
 class LoginPage extends StatefulWidget {
@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: SvgPicture.asset("assets/logos.svg"),
                   ),
                   Text(
-                    "Energy Savers",
+                    "Energy Saver",
                     style: GoogleFonts.roboto(
                         color: Colors.black,
                         fontSize: MediaQuery.of(context).size.height * 0.04,
@@ -43,15 +43,18 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-            const TextField1(text: "İsim", htext: "İsminizi giriniz"),
+            const TextField1(text: "İsim", htext: "İsminizi giriniz",obs: false,),
             const TextField1(
               text: "E-posta",
               htext: "E-posta adresinizi giriniz",
+              obs: false,
             ),
             const TextField1(
               text: "Parola",
               htext: "Parolanızı giriniz",
-              icon: Icon(Icons.visibility),
+              icon: Icon(Icons.visibility_off),
+              inputype: TextInputType.numberWithOptions(),
+              obs: true,
             ),
             Padding(
               padding: EdgeInsets.symmetric(
@@ -165,11 +168,13 @@ class TextField1 extends StatelessWidget {
     Key? key,
     required this.text,
     this.htext,
-    this.icon,
+    this.icon, this.inputype, required this.obs,
   }) : super(key: key);
   final String text;
   final String? htext;
   final Icon? icon;
+  final TextInputType? inputype;
+  final bool obs;
 
   @override
   Widget build(BuildContext context) {
@@ -205,6 +210,8 @@ class TextField1 extends StatelessWidget {
                 horizontal: MediaQuery.of(context).size.width * 0.05,
                 vertical: MediaQuery.of(context).size.width * 0.03),
             child: TextField(
+              obscureText: obs,
+              keyboardType: inputype,
               cursorColor: Colors.black,
               decoration: InputDecoration(
                 border: InputBorder.none,

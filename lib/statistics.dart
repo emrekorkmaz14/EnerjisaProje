@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class Statistics extends StatefulWidget {
@@ -24,7 +26,7 @@ class _StatisticsState extends State<Statistics> {
               axes: [
                 RadialAxis(
                   showLabels: false,
-                  pointers: [
+                  pointers: const [
                     MarkerPointer(
                       value: 60,
                       markerHeight: 20,
@@ -33,7 +35,62 @@ class _StatisticsState extends State<Statistics> {
                   ],
                 )
               ],
-            )
+            ),
+            Text(
+              "Değer",
+              style: GoogleFonts.roboto(
+                  color: Colors.black,
+                  fontSize: MediaQuery.of(context).size.height * 0.035,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.width * 0.05,
+            ),
+            Container(
+              color: const Color.fromARGB(255, 178, 240, 195),
+              height: MediaQuery.of(context).size.width * 0.15,
+              width: MediaQuery.of(context).size.width * 0.75,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: MediaQuery.of(context).size.height * 0.02,
+                ),
+                child: Text("289.6 KW",
+                    style: GoogleFonts.roboto(
+                        color: Colors.black,
+                        fontSize: MediaQuery.of(context).size.height * 0.025,
+                        fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center),
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.width * 0.05,
+            ),
+            Text(
+              "Karşılık",
+              style: GoogleFonts.roboto(
+                  color: Colors.black,
+                  fontSize: MediaQuery.of(context).size.height * 0.035,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.width * 0.05,
+            ),
+            Container(
+              color: const Color.fromARGB(255, 178, 240, 195),
+              height: MediaQuery.of(context).size.width * 0.15,
+              width: MediaQuery.of(context).size.width * 0.75,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: MediaQuery.of(context).size.height * 0.02,
+                ),
+                child: Text("Ortalama Üstü",
+                    style: GoogleFonts.roboto(
+                        color: Colors.black,
+                        fontSize: MediaQuery.of(context).size.height * 0.025,
+                        fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center),
+              ),
+            ),
           ],
         ),
       ),

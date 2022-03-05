@@ -17,24 +17,26 @@ class _DwellingPageState extends State<DwellingPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 178, 240, 195),
+        backgroundColor: const Color.fromARGB(255, 178, 240, 195),
         appBar: AppBar(
-          actions: [
-            SvgPicture.asset("assets/logos.svg",
-                height: MediaQuery.of(context).size.height * 0.04),
-          ],
           backgroundColor: Colors.white,
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.07,
+              ),
+              SvgPicture.asset("assets/logos.svg",
+                  height: MediaQuery.of(context).size.height * 0.05),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.05,
+              ),
               Text(
                 "Energy Saver",
                 style: GoogleFonts.roboto(
                     color: Colors.black, fontWeight: FontWeight.w500),
-              )
+              ),
             ],
           ),
-          centerTitle: true,
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(
@@ -55,7 +57,7 @@ class _DwellingPageState extends State<DwellingPage> {
           backgroundColor: const Color.fromARGB(255, 40, 122, 50),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AddPage()));
+                context, MaterialPageRoute(builder: (context) => const AddPage()));
           },
           child: const Icon(Icons.add),
         ),

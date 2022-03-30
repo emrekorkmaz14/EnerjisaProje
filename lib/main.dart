@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Color.fromARGB(255, 178, 240, 195),
+          backgroundColor: Colors.white,
           body: LoginPage(),
         ),
       ),

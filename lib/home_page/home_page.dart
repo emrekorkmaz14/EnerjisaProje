@@ -24,26 +24,27 @@ class _HomePageState extends State<HomePage> {
             children: [
               Row(
                 children: [
-                  SizedBox(
+                  /* SizedBox(
                     height: MediaQuery.of(context).size.width * 0.15,
                     width: MediaQuery.of(context).size.width * 0.15,
                     child: SvgPicture.asset("assets/world.svg"),
                   ),
-                  const SizedBox(width: 20),
+                  const SizedBox(width: 20), */
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Merhaba, Emre",
+                        "Hi Aleyna!",
                         style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            fontSize:
-                                MediaQuery.of(context).size.height * 0.023),
+                          color: Colors.grey.shade800,
+                          fontWeight: FontWeight.bold,
+                          fontSize: MediaQuery.of(context).size.height * 0.05,
+                        ),
                       ),
                       Text(
-                        "Hadi Dünya'yı kurtaralım!",
-                        style:
-                            GoogleFonts.roboto(color: Colors.grey.shade600),
+                        "Lets save our money",
+                        style: GoogleFonts.roboto(
+                            color: Colors.grey.shade600, fontSize: 22),
                       ),
                     ],
                   ),
@@ -60,11 +61,12 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Lottie.asset("assets/greenenergy.json",
                       height: MediaQuery.of(context).size.height * 0.35),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                   Text(
                     "Daha az enerji tüketmeleri için buzdolabı ve derin dondurucuyu güneş almayan, arkası ve yanları hava alabilecek şekilde konumlandırmalısınız.",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.roboto(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w400,
                         fontSize: MediaQuery.of(context).size.height * 0.025),
                   ),
                 ],

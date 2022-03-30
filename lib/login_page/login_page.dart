@@ -22,23 +22,26 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(
-                vertical: MediaQuery.of(context).size.width * 0.13,
-              ),
+              padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.width * 0.06,
+                  bottom: MediaQuery.of(context).size.width * 0.01),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.width * 0.15,
-                    width: MediaQuery.of(context).size.width * 0.15,
+                    height: MediaQuery.of(context).size.width * 0.37,
+                    width: MediaQuery.of(context).size.width * 0.37,
                     child: SvgPicture.asset("assets/logos.svg"),
+                  ),
+                  const SizedBox(
+                    height: 5,
                   ),
                   Text(
                     "Energy Saver",
                     style: GoogleFonts.roboto(
-                        color: Colors.black,
-                        fontSize: MediaQuery.of(context).size.height * 0.04,
-                        fontWeight: FontWeight.bold),
+                        color: Colors.grey.shade800,
+                        fontSize: MediaQuery.of(context).size.height * 0.028,
+                        fontWeight: FontWeight.w300),
                   ),
                 ],
               ),
@@ -62,29 +65,29 @@ class _LoginPageState extends State<LoginPage> {
                 vertical: MediaQuery.of(context).size.width * 0.03,
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Checkbox(
-                      value: isChecked,
-                      onChanged: (value) {
-                        isChecked = !isChecked;
-                        setState(() {});
-                      }),
-                  Text(
-                    "Beni hatırla",
-                    style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: MediaQuery.of(context).size.width * 0.08,
-                    ),
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Parolamı unuttum",
-                        style: GoogleFonts.roboto(
-                            color: const Color.fromARGB(255, 40, 122, 50),
-                            fontWeight: FontWeight.bold),
+                  Row(
+                    children: [
+                      Checkbox(
+                          value: isChecked,
+                          onChanged: (value) {
+                            isChecked = !isChecked;
+                            setState(() {});
+                          }),
+                      Text(
+                        "Remember me",
+                        style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
                       ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Forgot my password",
+                      style: GoogleFonts.roboto(
+                          color: const Color.fromARGB(255, 40, 122, 50),
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -99,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                       MaterialPageRoute(builder: (context) => const NavBar()));
                 },
                 child: Text(
-                  "Giriş",
+                  "LOG IN",
                   style: GoogleFonts.roboto(
                       color: Colors.white, fontWeight: FontWeight.w800),
                 ),
@@ -113,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                 vertical: MediaQuery.of(context).size.width * 0.06,
               ),
               child: Text(
-                "Veya",
+                "or",
                 style: GoogleFonts.roboto(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey.shade800,
@@ -185,7 +188,7 @@ class TextField1 extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: MediaQuery.of(context).size.width * 0.08,
+                horizontal: MediaQuery.of(context).size.width * 0.11,
                 vertical: MediaQuery.of(context).size.width * 0.03,
               ),
               child: Text(

@@ -16,7 +16,7 @@ class _UsesPageState extends State<UsesPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 178, 240, 195),
+        backgroundColor: Colors.grey.shade100,
         appBar: AppBar(
           
           backgroundColor: Colors.white,
@@ -50,7 +50,7 @@ class _UsesPageState extends State<UsesPage> {
               children: [
                 UsesCard(
                   svg: "assets/useselec.svg",
-                  text: "Elektrik",
+                  text: "Electric",
                   onPress: () {
                     Navigator.push(
                         context,
@@ -60,7 +60,7 @@ class _UsesPageState extends State<UsesPage> {
                 ),
                 UsesCard(
                   svg: "assets/useswater.svg",
-                  text: "Su",
+                  text: "Water",
                   onPress: () {
                     Navigator.push(
                         context,
@@ -70,7 +70,7 @@ class _UsesPageState extends State<UsesPage> {
                 ),
                 UsesCard(
                   svg: "assets/usesradiot.svg",
-                  text: "Doğalgaz",
+                  text: "Gas",
                   onPress: () {
                     Navigator.push(
                         context,
@@ -105,10 +105,10 @@ class UsesCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(5),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: Colors.grey.withOpacity(0.3),
               spreadRadius: 5,
               blurRadius: 7,
               offset: const Offset(0, 3), // changes position of shadow
@@ -131,7 +131,7 @@ class UsesCard extends StatelessWidget {
                 text,
                 style: GoogleFonts.roboto(
                     fontSize: MediaQuery.of(context).size.height * 0.03,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w400),
               ),
               const Spacer(),
             ],

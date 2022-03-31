@@ -46,7 +46,7 @@ class _ControlPageState extends State<ControlPage> {
               height: MediaQuery.of(context).size.height * 0.03,
             ),
             Listtilewidget(
-                svg: SvgPicture.asset("assets/daily.svg"), text: " Aylık "),
+                svg: SvgPicture.asset("assets/daily.svg"), text: " Monthly "),
             const Spacer(),
           ],
         ),

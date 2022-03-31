@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                       height: MediaQuery.of(context).size.height * 0.35),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                   Text(
-                    "Daha az enerji tüketmeleri için buzdolabı ve derin dondurucuyu güneş almayan, arkası ve yanları hava alabilecek şekilde konumlandırmalısınız.",
+                    "Position the refrigerator in a way that is not exposed to sunlight, and that the back and sides can breathe, so that it consumes less energy.",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.roboto(
                         fontWeight: FontWeight.w400,

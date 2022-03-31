@@ -37,15 +37,15 @@ class _NavBar extends State<NavBar> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Anasayfa',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.brightness_6),
-            label: 'Kullanımlar',
+            label: 'My Uses',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Hesaplar',
+            label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,

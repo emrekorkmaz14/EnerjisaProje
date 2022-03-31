@@ -37,7 +37,7 @@ class _StatisticsState extends State<Statistics> {
               ],
             ),
             Text(
-              "Değer",
+              "Value",
               style: GoogleFonts.roboto(
                   color: Colors.black,
                   fontSize: MediaQuery.of(context).size.height * 0.035,
@@ -66,7 +66,7 @@ class _StatisticsState extends State<Statistics> {
               height: MediaQuery.of(context).size.width * 0.05,
             ),
             Text(
-              "Karşılık",
+              "Meaning",
               style: GoogleFonts.roboto(
                   color: Colors.black,
                   fontSize: MediaQuery.of(context).size.height * 0.035,
@@ -83,7 +83,7 @@ class _StatisticsState extends State<Statistics> {
                 padding: EdgeInsets.symmetric(
                   vertical: MediaQuery.of(context).size.height * 0.02,
                 ),
-                child: Text("Ortalama Üstü",
+                child: Text("Above Average",
                     style: GoogleFonts.roboto(
                         color: Colors.black,
                         fontSize: MediaQuery.of(context).size.height * 0.025,

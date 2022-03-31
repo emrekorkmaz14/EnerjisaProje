@@ -24,10 +24,10 @@ class _AddPageState extends State<AddPage> {
             horizontal: MediaQuery.of(context).size.width * 0.08),
         child: Column(
           children: [
-            const TextField1(text: "Elektrik Sayaç No",obs: false,),
-            const TextField1(text: "Su Sayaç No",obs: false),
-            const TextField1(text: "Doğalgaz Sayaç No",obs: false),
-            const TextField1(text: "Kaydetmek İstediğiniz İsim",obs: false),
+            const TextField1(text: "Electricity Meter No",obs: false,),
+            const TextField1(text: "Water Meter No",obs: false),
+            const TextField1(text: "Gas Meter No",obs: false),
+            const TextField1(text: "Name To Be Registered",obs: false),
             const Spacer(),
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.5,
@@ -35,7 +35,7 @@ class _AddPageState extends State<AddPage> {
               child: ElevatedButton(
                 onPressed: () {},
                 child: Text(
-                  "Kaydet",
+                  "Save",
                   style: GoogleFonts.roboto(
                       color: const Color.fromARGB(255, 0, 0, 0),
                       fontWeight: FontWeight.w800),

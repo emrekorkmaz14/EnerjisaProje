@@ -46,9 +46,9 @@ class _DwellingPageState extends State<DwellingPage> {
             height: MediaQuery.of(context).size.height,
             child: Column(
               children: [
-                const UsesCard(svg: "assets/homemes.svg", text: "Ev"),
+                const UsesCard(svg: "assets/homemes.svg", text: "Home"),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                const UsesCard(svg: "assets/workplacemes.svg", text: "İş Yeri"),
+                const UsesCard(svg: "assets/workplacemes.svg", text: "Workplace"),
               ],
             ),
           ),

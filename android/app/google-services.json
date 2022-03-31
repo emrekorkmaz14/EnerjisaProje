@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "426871472394",
+    "project_id": "enerjisa-28694",
+    "storage_bucket": "enerjisa-28694.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426871472394:android:1129257006871c76c43af3",
+        "android_client_info": {
+          "package_name": "com.example.sadeneme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426871472394-egohafavdniueakif01mmlcqohbpas7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKXAuOGKn3qthz9HWHXxJDT8agfdJBnm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426871472394-egohafavdniueakif01mmlcqohbpas7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

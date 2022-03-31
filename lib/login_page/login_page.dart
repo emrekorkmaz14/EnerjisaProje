@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:sadeneme/nav_bar.dart';
+import 'package:sadeneme/services/auth_services.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -15,6 +16,9 @@ class LoginPage extends StatefulWidget {
 bool isChecked = false;
 
 class _LoginPageState extends State<LoginPage> {
+  late final myController = TextEditingController();
+  final myController1 = TextEditingController();
+  final myController2 = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -46,15 +50,22 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-            const TextField1(text: "Name", htext: "Fill your name",obs: false,),
-            const TextField1(
-              text: "E-mail",
-              htext: "Fill your e-mail",
+            TextField1(
+              controller: myController2,
+              text: "İsim",
+              htext: "İsminizi giriniz",
               obs: false,
             ),
-            const TextField1(
-              text: "Password",
-              htext: "Choose Your Password",
+            TextField1(
+              controller: myController,
+              text: "E-posta",
+              htext: "E-posta adresinizi giriniz",
+              obs: false,
+            ),
+            TextField1(
+              controller: myController1,
+              text: "Parola",
+              htext: "Parolanızı giriniz",
               icon: Icon(Icons.visibility_off),
               inputype: TextInputType.numberWithOptions(),
               obs: true,
@@ -98,6 +109,13 @@ class _LoginPageState extends State<LoginPage> {
               height: MediaQuery.of(context).size.width * 0.1,
               child: ElevatedButton(
                 onPressed: () {
+                  if (myController != null && myController1 != null) {
+                    MyAuthService().registerWithMail(
+                        mail: myController.text, password: myController1.text);
+                  } else {
+                    print(
+                        "Bir hata oluştu. email : $myController password: $myController1");
+                  }
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const NavBar()));
                 },
@@ -171,13 +189,17 @@ class TextField1 extends StatelessWidget {
     Key? key,
     required this.text,
     this.htext,
-    this.icon, this.inputype, required this.obs,
+    this.icon,
+    this.inputype,
+    required this.obs,
+    required this.controller,
   }) : super(key: key);
   final String text;
   final String? htext;
   final Icon? icon;
   final TextInputType? inputype;
   final bool obs;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -213,6 +235,7 @@ class TextField1 extends StatelessWidget {
                 horizontal: MediaQuery.of(context).size.width * 0.05,
                 vertical: MediaQuery.of(context).size.width * 0.03),
             child: TextField(
+              controller: controller,
               obscureText: obs,
               keyboardType: inputype,
               cursorColor: Colors.black,
